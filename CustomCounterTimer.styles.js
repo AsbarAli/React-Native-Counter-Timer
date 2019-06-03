@@ -128,7 +128,7 @@ export const containerStyleProps = {
   // Moved up to the styles
 };
 
-export const gradientColorsRepsDefault = [colors.activity.white, colors.activity.white];
+export const gradientColorsRepsDefault = [colors.background.transparent, colors.background.transparent];
 export const gradientColorsDefault = gradientColorsRepsDefault;
 // export const gradientColorsRepsActive = [colors.activity.white, colors.activity.white];
 // export const gradientColorsRestInactive = [colors.activity.backgroundOrange, colors.activity.white];
