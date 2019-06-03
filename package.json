@@ -2,7 +2,6 @@
   "version": "1.0.0",
   "name": "react-native-counter-timer",
   "description": "Better way to manage timer count",
-  "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
