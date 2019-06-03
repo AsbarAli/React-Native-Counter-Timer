@@ -23,7 +23,7 @@ import {
   SET,
   MINUITES,
   SECONDS,
-} from '@RNCounterTimer:shared/strings';
+} from '../shared/strings';
 import styles, {
   containerStyleProps,
   gradientColorsRepsDefault,
@@ -32,7 +32,7 @@ import styles, {
   progressColorTimer,
 } from './CustomCounterTimer.styles';
 
-import colors from '@RNCounterTimer:theme/colors';
+import colors from '../shared/themes/colors';
 import {ResetComponent, PrimaryActionComponent} from '../shared/components';
 
 type CustomCounterTimerProps = {
