@@ -18,6 +18,20 @@ yarn add react-native-counter-timer
 ```
 import RNTimer from "react-native-counter-timer";
 
+const timer = {
+  id: 1,
+  name: 'DF',
+  restTimeHours: 0,
+  restTimeMinutes: 0,
+  restTimeSeconds: 7,
+  activiTimeHours: 0,
+  activeTimeMinutes: 0,
+  activeTimeSeconds: 8,
+  sets: 7,
+  createdDate: null,
+  modifiedDate: null
+ };
+
  <RNTimer 
   timer={timer}
   controlsWrapperStyle={{
