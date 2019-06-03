@@ -15,8 +15,8 @@ import {
   HOURS,
   MINUITES,
   SECONDS,
-} from '@RNCounterTimer:shared/strings';
-import colors from '@RNCounterTimer:theme/colors';
+} from '../../shared/strings';
+import colors from '../../shared/themes/colors';
 import styles, {
   progressCircleDefaultStyleProps,
 } from './ActivityTimer.styles';

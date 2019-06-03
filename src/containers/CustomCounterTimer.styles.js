@@ -2,7 +2,7 @@
 import {StyleSheet} from 'react-native';
 
 // import {typeFace, typeFaceMontserrat, secondaryText} from '@crock:theme/base';
-import colors from '@RNCounterTimer:theme/colors';
+import colors from '../shared/themes/colors';
 // import colors from './../../theme/colors';
 
 const style = StyleSheet.create({

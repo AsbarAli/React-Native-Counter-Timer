@@ -2,7 +2,7 @@
 import {StyleSheet} from 'react-native';
 
 // import {typeFace} from '@crock:theme/base';
-import colors from '@RNCounterTimer:theme/colors';
+import colors from '../../shared/themes/colors';
 
 const style = StyleSheet.create({
   container: {

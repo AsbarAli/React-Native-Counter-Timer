@@ -18,7 +18,7 @@ const ACTIVITY_STATUS = {
 
 import {
   RESET,
-} from '@RNCounterTimer:shared/strings';
+} from '../../strings';
 import colors from '@RNCounterTimer:theme/colors';
 
 class ResetComponent extends React.PureComponent<ResetProps, ResetState> {

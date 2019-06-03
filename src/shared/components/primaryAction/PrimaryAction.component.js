@@ -9,7 +9,7 @@ import {
   START,
   PAUSE,
   COMPLETED,
-} from '@RNCounterTimer:shared/strings';
+} from '../../strings';
 
 type PrimaryActionProps = {};
 type PrimaryActionState = {};
