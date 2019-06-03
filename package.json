@@ -1,0 +1,27 @@
+{
+  "name": "react-native-counter-timer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react-native-linear-gradient": "^2.5.4",
+    "react-native-progress": "3.4.0",
+    "react-native-sound": "^0.10.12"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "counter",
+    "timer",
+    "react-native-counter-timer",
+    "Asbar"
+  ],
+  "author": "asbar <loons.create@gmail.com> (https://www.linkedin.com/in/asbar-ali-2babb110a/)",
+  "license": "MIT",
+  "jest": {
+    "preset": "react-native"
+  }
+}
