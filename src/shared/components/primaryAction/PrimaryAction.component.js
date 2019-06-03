@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import type {Element as ReactElement} from 'react';
 
-import {PrimaryButton} from '../';
+import {PrimaryButtonComponent} from '../';
 
 import {
   START,
