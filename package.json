@@ -1,6 +1,7 @@
 {
-  "name": "react-native-counter-timer",
   "version": "1.0.0",
+  "name": "react-native-counter-timer",
+  "description": "Better way to manage timer count",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -23,5 +24,14 @@
   "license": "MIT",
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsbarAli/react-native-counter-timer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AsbarAli/react-native-counter-timer/issues"
+  },
+  "homepage": "https://github.com/AsbarAli/react-native-counter-timer#readme"
 }
