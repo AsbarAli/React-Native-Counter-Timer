@@ -881,7 +881,7 @@ CustomCounterTimerContainer.defaultProps = {
     justifyContent: 'space-between',
     alignSelf: 'stretch',
   },
-  controllerButtons: [RESET, PRIMARY_ACTION, SKIP],
+  controllerButtons: [PRIMARY_ACTION],
   controllerPosition: BOTTOM,
   controllerResetText: RESET,
   controllerResetButtonStyle: {

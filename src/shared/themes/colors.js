@@ -72,6 +72,7 @@ export default {
     appGray: '#E0E0E0',
     greenCrock: '#116466',
     disbaledGreenCrock: '#649A9B',
+    transparent: 'transparent',
   },
 
   tabBar: {
