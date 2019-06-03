@@ -2,7 +2,7 @@
 import {StyleSheet, Platform} from 'react-native';
 
 // import {typeFace} from '@crock:theme/base';
-import colors from '@RNCounterTimer:theme/colors';
+import colors from '../../themes/colors';
 
 const styles = StyleSheet.create({
   // Base button style
