@@ -13,30 +13,52 @@ yarn add react-native-counter-timer
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/com2.gif?raw=true)
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/03.gif?raw=true)
 
+## Usage
+
+```
+import RNTimer from "react-native-counter-timer";
+
+const timer = {
+  id: 1,
+  name: 'DF',
+  restTimeHours: 0,
+  restTimeMinutes: 0,
+  restTimeSeconds: 7,
+  activiTimeHours: 0,
+  activeTimeMinutes: 0,
+  activeTimeSeconds: 8,
+  sets: 7,
+  createdDate: null,
+  modifiedDate: null
+ };
+
+ <RNTimer 
+  timer={timer}
+  controlsWrapperStyle={{
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10}}
+  />
+```
+
 ## Props
 
 ### Controller
 
 | Props | Description |  Type | Default Values |
 | ------------- |----------- |------------- |----|
-|*CONTROLLER*||
 | `controllerButtons`                              ||  array | ['RESET', 'PRIMARY_ACTION', 'SKIP'] |
 | `controllerPosition`                             || String | 'BOTTOM'|
 | `controlsWrapperStyle`                           || Object | {flexDirection: 'row',justifyContent: 'space-around',paddingBottom: 10,paddingTop: 10,}|
-|*RESET BUTTON* |||
 | `controllerResetText`                            || String | 'RESET'|
 | `controllerResetButtonTextStyle`                 || Object | {color: '#0086C6',fontSize: 16}|
 | `controllerResetButtonStyle`                     || Object | {paddingTop: 10,alignItems: 'center',flex: 1}| 
 | `controllerDisabledResetButtonTextStyle`         || Object | null |
 | `controllerDisabledResetButtonStyle`             || Object | null |
-| *SKIP BUTTON* |||
 | `controllerSkipButtonText`                       || String | 'SKIP'|
-|`TODO`||
 | `controllerSkipButtonStyle`                      || Object | {paddingTop: 10,alignItems: 'center',flex: 1,}|
 | `controllerDisabledSkipButtonTextStyle`          || Object | null |
 | `controllerDisabledSkipButtonStyle`              || Object | null |
-| *PRIMARY AND SECONDARY ACTION BUTTONS* |||
-|`TODO`||
 | `controllerMainPrimaryActionButtonStyle`         || Object | null |
 | `controllerMainPrimaryActionDisabledButtonStyle` || Object | null |
 | `controllerSecondPrimaryActionButtonStyle`       || Object | null |
@@ -62,11 +84,9 @@ yarn add react-native-counter-timer
 |------------|--------|-------|----------------|
 | `counterTimer` || array | ['HOURS', 'MINUITES', 'SECONDS'] |
 | `counterTexts` || array | ['MAX_TIME', 'TIMER', 'SET'] } |
-| *SET* ||
 | `counterSetSeperatorText` || String | '/' |
 | `counterSetText`          || String | 'Set' |
 | `counterSetTextWrapperStyle` || Object | {fontSize: 20, color: 'black'} |
-| *TIMER STATUS* ||
 | `counterTimerDefaultStatusText` || String | 'Default' |
 | `counterTimerPrimaryStatusText` || String | 'primary' |
 | `counterTimerSecondaryStatusText` || String | 'secondary' |
@@ -85,14 +105,10 @@ yarn add react-native-counter-timer
 |------------|---------------|----------------|
 | `onActivityCompleted` | Invoke after completed the timer| null |
 | `onSecondaryModeEnd`| Invoke when secondary mode end|null |
-| *PRIMARY AND SECONDARY ACTION BUTTONS* ||
 | `onPrimaryModeStartPressed` | Invoke when press start button in primary mode|null |
 | `onSecondaryModePausePressed`| Invoke when press pause button in secondary mode |null |
 | `onPrimaryModePausePressed`| Invoke when presss pause button in primary mode | null |
 | `onSecondaryModeStartPressed`| Invoke when press start button in secondary mode |null |
-| *RESET BUTTON*||
-| `onResetButtonPressed`| Invoke when press reset button |null |
-| *SKIP BUTTON*||
 | `onSkipPressed`| Invoke when press skip button |null |
 
 
