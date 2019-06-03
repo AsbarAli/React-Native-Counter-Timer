@@ -8,8 +8,7 @@
   },
   "dependencies": {
     "react-native-linear-gradient": "^2.5.4",
-    "react-native-progress": "3.4.0",
-    "react-native-sound": "^0.10.12"
+    "react-native-progress": "3.4.0"
   },
   "keywords": [
     "react-native",
