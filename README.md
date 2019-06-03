@@ -1,6 +1,14 @@
 # React Native Counter Timer
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+## Installation
+
+```
+npm i react-native-counter-timer --save 
+``` 
+or
+``` 
+yarn add react-native-counter-timer
+```
 
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/com2.gif?raw=true)
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/03.gif?raw=true)
