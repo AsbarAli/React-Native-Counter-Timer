@@ -19,8 +19,6 @@ yarn add react-native-counter-timer
 import RNTimer from "react-native-counter-timer";
 
 const timer = {
-  id: 1,
-  name: 'DF',
   restTimeHours: 0,
   restTimeMinutes: 0,
   restTimeSeconds: 7,
@@ -28,8 +26,6 @@ const timer = {
   activeTimeMinutes: 0,
   activeTimeSeconds: 8,
   sets: 7,
-  createdDate: null,
-  modifiedDate: null
  };
 
  <RNTimer 
