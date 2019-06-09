@@ -9,7 +9,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import PropTypes from 'prop-types';
 import type {Element as ReactElement} from 'react';
 
-import ActivityTimerComponent from '../shared/components/ActivityTimerComponent';
+import ActivityTimerComponent from './activityTimer/ActivityTimerComponent';
 
 import {
   SKIP,
@@ -832,15 +832,11 @@ CustomCounterTimerContainer.propTypes = {
   showMuteElement: PropTypes.bool,
 
   timer: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
     restTimeMinutes: PropTypes.number.isRequired,
     restTimeSeconds: PropTypes.number.isRequired,
     activeTimeMinutes: PropTypes.number.isRequired,
     activeTimeSeconds: PropTypes.number.isRequired,
     sets: PropTypes.number.isRequired,
-    // createdDate: PropTypes.any.isRequired,
-    // modifiedDate: PropTypes.any.isRequired,
   }).isRequired,
   timerStatusTextStyle: PropTypes.any,
   topItemsWrapperStyle: PropTypes.any,
@@ -881,7 +877,7 @@ CustomCounterTimerContainer.defaultProps = {
     justifyContent: 'space-between',
     alignSelf: 'stretch',
   },
-  controllerButtons: [RESET, PRIMARY_ACTION, SKIP],
+  controllerButtons: [PRIMARY_ACTION],
   controllerPosition: BOTTOM,
   controllerResetText: RESET,
   controllerResetButtonStyle: {

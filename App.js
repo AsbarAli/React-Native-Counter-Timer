@@ -127,8 +127,9 @@ export default class App extends Component<Props> {
   }
 
   render() {
-    const timer = {id: 1,
-      name: 'DF',
+    const timer = {
+      // id: 1,
+      // name: 'DF',
       restTimeHours: 0,
       restTimeMinutes: 0,
       restTimeSeconds: 7,
@@ -136,15 +137,16 @@ export default class App extends Component<Props> {
       activeTimeMinutes: 0,
       activeTimeSeconds: 8,
       sets: 7,
-      createdDate: null,
-      modifiedDate: null};
+      // createdDate: null,
+      // modifiedDate: null
+    };
 
     return (
       <View style={styles.container}>
         <CustomCounterTimerContainer
 
           // =========Controllers==========
-          controllerButtons={['RESET', 'PRIMARY_ACTION', 'SKIP']}
+          // controllerButtons={['RESET', 'PRIMARY_ACTION', 'SKIP']}
           // controllerDisabledResetButtonStyle={{backgroundColor: 'yellow'}}
           // controllerDisabledResetButtonTextStyle={{color: 'red'}}
           // controllerDisabledSkipButtonStyle={{backgroundColor: 'green'}}
@@ -224,6 +226,10 @@ export default class App extends Component<Props> {
           // progressVisible={false}
           // progressWrapper={{paddingTop: 0, backgroundColor: 'blue'}}
 
+          controlsWrapperStyle={{
+            flexDirection: 'column',
+            alignItems: 'center',
+            padding: 10}}
           timer={timer}
           // topItemsWrapperStyle={{flexDirection: 'row', justifyContent: 'space-between', alignSelf: 'stretch'}}
         />
