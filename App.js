@@ -143,8 +143,10 @@ export default class App extends Component<Props> {
       <View style={styles.container}>
         <CustomCounterTimerContainer
 
-          // =========Controllers==========
           controllerButtons={['RESET', 'PRIMARY_ACTION', 'SKIP']}
+
+          // =========Controllers==========
+          runInBackground={false}
           // controllerDisabledResetButtonStyle={{backgroundColor: 'yellow'}}
           // controllerDisabledResetButtonTextStyle={{color: 'red'}}
           // controllerDisabledSkipButtonStyle={{backgroundColor: 'green'}}
@@ -235,8 +237,8 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     paddingTop: 50,
-    // flex: 1,
-    // flexDirection: 'row',
+    flex: 1,
+    flexDirection: 'row',
     // height: 320,
     // marginTop: 32,
     // // paddingHorizontal: 16,

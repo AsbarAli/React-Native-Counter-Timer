@@ -116,6 +116,8 @@ export default style;
 export const containerStyleProps = {
   // Android shadow
   elevation: 5,
+  flex: 1,
+  flexDirection: 'column',
 
   // iOS shadow
   // shadowColor: colors.background.crockfitGray,
