@@ -61,7 +61,16 @@ class ActivityTimerComponent extends React.PureComponent<ActivityTimerProps, Act
   }
 
   componentWillUnmount() {
-    this._counter && clearInterval(this._counter);
+    const {runInBackground} = this.props;
+
+    if (runInBackground) {
+      this.clearBackgroundTimer();
+      if (Platform.OS === 'ios') {
+        BackgroundTimer.stop();
+      }
+    } else {
+      this._counter && clearInterval(this._counter);
+    }
   }
 
   _counter = null
@@ -82,7 +91,12 @@ class ActivityTimerComponent extends React.PureComponent<ActivityTimerProps, Act
   }
 
   resolveActivityTimeChanged = (newProps: ActivityTimerProps): void => {
+    const {runInBackground} = this.props;
+
     if (this.props.timeToRun !== newProps.timeToRun) {
+      if (runInBackground) {
+        this.clearBackgroundTimer();
+      }
       this._counter && clearInterval(this._counter);
       this.setState({
         elapsedTime: 0,
@@ -91,7 +105,32 @@ class ActivityTimerComponent extends React.PureComponent<ActivityTimerProps, Act
     }
   }
 
-  initTimer = (): void => {
+  clearBackgroundTimer = () => {
+    BackgroundTimer.clearInterval(this._counter);
+  }
+
+  initTimerInBackground = (): void => {
+    const countHandler = () => {
+      const {elapsedTime, totalTime} = this.state;
+      const newElapsedTime = elapsedTime + 1;
+      if (newElapsedTime <= totalTime) {
+        this.setState({
+          elapsedTime: newElapsedTime,
+        });
+      } else {
+        this.handleCountFinished();
+        this.clearBackgroundTimer();
+      }
+    };
+
+    if (Platform.OS == 'ios') {
+      BackgroundTimer.start();
+    }
+
+    this._counter = BackgroundTimer.setInterval(countHandler, 1000);
+  }
+
+  initTimerForeGroundOnly = (): void => {
     const oneSecondTimeout = 1000;
     const countHandler = () => {
       const {elapsedTime, totalTime} = this.state;
@@ -112,18 +151,36 @@ class ActivityTimerComponent extends React.PureComponent<ActivityTimerProps, Act
   }
 
   start = (): void => {
-    this.initTimer();
+    const {runInBackground} = this.props;
+
+    if (runInBackground) {
+      this.initTimerInBackground();
+    } else {
+      this.initTimerForeGroundOnly();
+    }
   }
 
   pause = (): void => {
-    this._counter && clearInterval(this._counter);
+    const {runInBackground} = this.props;
+
+    if (runInBackground) {
+      this.clearBackgroundTimer();
+    } else {
+      this._counter && clearInterval(this._counter);
+    }
   }
 
   // We don't need a specific "STOP" action right?
   // stop = (): void => {}
-
   reset = (): void => {
-    this._counter && clearInterval(this._counter);
+    const {runInBackground} = this.props;
+
+    if (runInBackground) {
+      this.clearBackgroundTimer();
+    } else {
+      this._counter && clearInterval(this._counter);
+    }
+
     this.setState({
       elapsedTime: 0,
     });
@@ -360,6 +417,7 @@ ActivityTimerComponent.propTypes = {
   progressStyle: PropTypes.any,
   progressThickness: PropTypes.number,
   progressVisible: PropTypes.bool,
+  runInBackground: PropTypes.bool,
   started: PropTypes.bool,
   timeToRun: PropTypes.number.isRequired,
   type: PropTypes.oneOf([ActivityTimerComponent.COUNT_TYPE.COUNTDOWN, ActivityTimerComponent.COUNT_TYPE.COUNTUP]),
@@ -398,7 +456,7 @@ ActivityTimerComponent.defaultProps = {
     fontSize: 20,
     color: colors.background.black,
   },
-
+  runInBackground: true,
 };
 
 export default ActivityTimerComponent;
