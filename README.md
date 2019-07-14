@@ -138,6 +138,13 @@ More info - https://github.com/react-native-community/react-native-linear-gradie
 | `onSecondaryModeStartPressed`| Invoke when press start button in secondary mode |null |
 | `onSkipPressed`| Invoke when press skip button |null |
 
+## Contributor guidelines
+
+- Fork the repository.
+- Clone the forked repository.
+- Create your own branch.
+- Create a pull request with changes made.
+
 
 License
 ----
