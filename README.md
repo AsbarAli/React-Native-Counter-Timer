@@ -1,5 +1,5 @@
 # React Native Counter Timer
-Advance Counter timer for React Native using [react-native progress](https://github.com/oblador/react-native-progress) and [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
+Advance Counter timer for React Native using [react-native progress](https://github.com/oblador/react-native-progress), [react-native-background-timer](https://github.com/ocetnik/react-native-background-timer) and [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
 
 ## Installation
 &nbsp;
@@ -42,9 +42,17 @@ BVLinearGradient component,
    header files installed within the `react-native` `node_modules`
    directory. [(Screenshot)](https://drive.google.com/open?id=1-m3KasC8xudkppVe_E2RsuFaxOfyx6FO).
 
+### Step 3 - Add background timer
+
+##### Using CocoaPod:
+Add this and and then run pod install in ios directory:
+```
+pod 'react-native-background-timer', :path => '../node_modules/react-native-background-timer'
+```
 
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/com2.gif?raw=true)
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/03.gif?raw=true)
+
 
 ## Usage - Basic
 
