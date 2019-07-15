@@ -2,8 +2,7 @@
 Advance Counter timer for react native using react-native progress and react-native-linear-gradient
 
 ## Installation
-#
-#
+&nbsp;
 ##### iOS,
 ### Step 1 - Install library
 ```
