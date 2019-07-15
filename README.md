@@ -2,7 +2,9 @@
 Advance Counter timer for react native using react-native progress and react-native-linear-gradient
 
 ## Installation
-
+#
+#
+##### iOS,
 ### Step 1 - Install library
 ```
 npm i react-native-counter-timer --save 
