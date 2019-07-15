@@ -1,5 +1,5 @@
 # React Native Counter Timer
-Advance Counter timer for react native using react-native progress and react-native-linear-gradient
+Advance Counter timer for React Native using [react-native progress](https://github.com/oblador/react-native-progress) and [react-native-linear-gradient](https://github.com/react-native-community/react-native-linear-gradient)
 
 ## Installation
 &nbsp;
