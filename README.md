@@ -1,7 +1,9 @@
 # React Native Counter Timer
+Advance Counter timer for react native using react-native progress and react-native-linear-gradient
 
 ## Installation
 
+### Step 1 - Install library
 ```
 npm i react-native-counter-timer --save 
 ``` 
@@ -9,6 +11,36 @@ or
 ``` 
 yarn add react-native-counter-timer
 ```
+### Step 2 - Add it to your project
+You need to include the ART library in your project on iOS, for android it's already included.
+##### For CocoaPod users:
+Add these 2 and and then run pod install in ios directory:
+```
+pod 'React-ART', :path => '../node_modules/react-native/Libraries/ART'
+```
+
+```
+pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+```
+
+##### Or manually:
+
+React ART based components,
+* Add the `ART.xcodeproj` (found in `node_modules/react-native/Libraries/ART`) to the **Libraries** group and add `libART.a` to **Link Binary With Libraries** under **Build Phases**. [More info and screenshots about how to do this is available in the React Native documentation](http://facebook.github.io/react-native/docs/linking-libraries-ios.html#content).
+
+BVLinearGradient component,
+1. Open your project in XCode, right click on `Libraries` and click `Add
+   Files to "Your Project Name"` Look under `node_modules/react-native-linear-gradient` and add `BVLinearGradient.xcodeproj`.  [(Screenshot 1)](https://drive.google.com/open?id=1ynspo3wZjCLav23teGwKtzh7pcXpeREO) [(Screenshot 2)](https://drive.google.com/open?id=1cXW4DZ-hz-DiugZ3E30msd_4JoUWNE4Z).
+2. Add `libBVLinearGradient.a` to `Build Phases -> Link Binary With Libraries`
+   [(Screenshot 1)](https://drive.google.com/open?id=12qT0Z7rfYrhnHYYECzVOAEMTjiPS2vJr) [(Screenshot 2)](https://drive.google.com/open?id=1LZ2CrOHydBjy479r9aEyMkvqqSbIdDLm).
+3. Click on `BVLinearGradient.xcodeproj` in `Libraries` and go the `Build
+   Settings` tab. Double click the text to the right of `Header Search
+   Paths` and verify that it has `$(SRCROOT)/../react-native/React` - if it
+   isn't, then add it. This is so XCode is able to find the headers that
+   the `BVLinearGradient` source files are referring to by pointing to the
+   header files installed within the `react-native` `node_modules`
+   directory. [(Screenshot)](https://drive.google.com/open?id=1-m3KasC8xudkppVe_E2RsuFaxOfyx6FO).
+
 
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/com2.gif?raw=true)
 ![](https://github.com/AsbarAli/counter/blob/master/src/assets/gif/03.gif?raw=true)
@@ -30,10 +62,6 @@ const timer = {
 
  <RNTimer 
   timer={timer}
-  controlsWrapperStyle={{
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 10}}
   />
 ```
 
