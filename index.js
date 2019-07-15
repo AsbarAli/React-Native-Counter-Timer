@@ -455,8 +455,11 @@ class CustomCounterTimerContainer extends React.PureComponent<CustomCounterTimer
     const {controllerMainPrimaryActionButtonStyle, controllerMainPrimaryActionDisabledButtonStyle, controllerMainPrimaryActionButtonElement,
       controllerMainPrimaryActionButtonTextStyle, controllerSecondPrimaryActionButtonTextStyle, controllerSecondPrimaryActionButtonElement, controllerSecondPrimaryActionButtonStyle} = this.props;
 
+    // TODO
+    const PrimaryActionWrapperStyle = {flex: 1, alignItems: 'center'};
+
     return (
-      <View style={{flex: 1}}>
+      <View style={PrimaryActionWrapperStyle}>
         <PrimaryActionComponent
           controllerMainPrimaryActionButtonElement={controllerMainPrimaryActionButtonElement}
           controllerMainPrimaryActionButtonStyle={controllerMainPrimaryActionButtonStyle}
@@ -663,7 +666,7 @@ class CustomCounterTimerContainer extends React.PureComponent<CustomCounterTimer
         runInBackground={runInBackground}
         started={this.state.restTimerRunning}
         timeToRun={restTime}
-        type={ActivityTimerComponent.COUNT_TYPE.COUNTDOWN}
+        type={ActivityTimerComponent.COUNT_TYPE.COUNTUP}
       />
     );
   }
