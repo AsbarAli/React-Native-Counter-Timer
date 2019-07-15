@@ -1,5 +1,5 @@
 {
-  "version": "1.0.13",
+  "version": "1.1.0",
   "name": "react-native-counter-timer",
   "description": "Better way to manage timer count",
   "scripts": {
@@ -7,9 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "react-native-linear-gradient": "^2.5.4",
+    "react-native-linear-gradient": "2.5.4",
     "react-native-progress": "3.4.0",
-    "react-native-background-timer": "^2.1.1"
+    "react-native-background-timer": "2.1.1"
   },
   "keywords": [
     "react-native",
