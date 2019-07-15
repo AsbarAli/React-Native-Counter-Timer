@@ -76,6 +76,10 @@ const timer = {
 
 ## Props
 
+### Timer
+| Props | Description |  Type | Default Values |
+| ------------- |----------- |------------- |----|
+|`runInBackground`| Run timer in background | bool | true |
 ### Controller
 
 | Props | Description |  Type | Default Values |
