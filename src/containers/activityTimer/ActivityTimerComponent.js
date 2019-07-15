@@ -7,6 +7,7 @@ import {
 import {Circle as CircularProgress} from 'react-native-progress';
 import PropTypes from 'prop-types';
 import type {Element as ReactElement} from 'react';
+import BackgroundTimer from 'react-native-background-timer';
 
 import {
   MAX_TIME,
